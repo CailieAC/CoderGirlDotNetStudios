@@ -8,10 +8,9 @@ namespace TipCalculator
         {
             decimal bill = 0;
             decimal tipPercent = 0;
-
-            //Here is how you might do it if you only wanted to give them a limited amount of retries
             int retries = 0;
             int maxRetries = 5;
+
             while (retries < maxRetries)
             {
                 Console.WriteLine("What was your bill amount?");
@@ -56,14 +55,12 @@ namespace TipCalculator
         {
             if (retries < maxRetries)
             {
-                Console.WriteLine($"The value {userInput} is not a valid input. Please try again.");
+                Console.WriteLine($"The value {userInput} is not a valid amount. Please try again.");
             }
             else
             {
                 Console.WriteLine("You have reached the max number of retries.");
             }
         }
-
-
     }
 }
